@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("wallpaper2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 25px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+    filter: invert(60%);
+}
+.searchfield{
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 10px 5px;
+    outline: none;
+    width: 180%;
+    left: 0;
+    bottom: 0;
+    font-weight: bold;
+    color: #fff;
+    background: none;
+}
+.fas{
+    color: #e9820c;
+    margin-right: 5px;
+}
+.searchfield:hover{
+    border: 2px solid #e9820c;
+    border-radius: 25px;
+    background: #2f3640;
+    padding: 10px 5px;
+    width: 180%;
+    transition: 0.2s;
+}
+.search-btn{
+    color: #e84118;
+    float: right;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 35px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #e9820c;
+    position: absolute;
+    left: 0;
+    bottom: -2px ;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+
+
+.sub-menu1, .sub-menu2{
+    display: none;
+}
+.navbar ul li:hover .sub-menu1{
+    width: 280px;
+    display: block;
+    position: absolute;
+    background: #ced6d041;
+    border-radius: 25px;
+    margin-top: 3px;
+    margin-left: -30px;
+}
+.navbar ul li:hover .sub-menu1 ul{
+    display: block;
+    margin: 5px;
+}
+.navbar ul li:hover .sub-menu1 ul li{
+    padding: 15px 0px;
+    background: transparent;
+}
+.navbar ul li:hover .sub-menu2{
+    width: 200px;
+    display: block;
+    position: absolute;
+    background: #ced6d041;
+    border-radius: 25px;
+    margin-top: 3px;
+    margin-left: -50px;
+}
+.navbar ul li:hover .sub-menu2 ul{
+    display: block;
+    margin: 5px;
+}
+.navbar ul li:hover .sub-menu2 ul li{
+    padding: 15px 0px;
+    background: transparent;
+}
+.menu{
+    color: #e9820c;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.content h1{
+    font-size: 50px;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+.content p{
+    margin: auto;
+    font-weight: bold;
+    line-height: 15px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    margin: 10px 20px;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #e9820c;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+}
+button::after{
+    content: '';
+    background: #e9820c;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+button:hover::after{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+button:hover{
+    border: none;
+}
